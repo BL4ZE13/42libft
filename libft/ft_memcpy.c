@@ -6,15 +6,13 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 12:45:12 by diomarti          #+#    #+#             */
-/*   Updated: 2022/10/25 13:21:38 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/10/25 17:01:38 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
-void	*ft_memcpy(void  *dest, void *src, size_t n)
+void	*ft_memcpy(void *dest, void *src, size_t n)
 {
 	unsigned char	*str1;
 	unsigned char	*str2;

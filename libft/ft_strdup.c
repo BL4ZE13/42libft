@@ -1,23 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 13:26:57 by diomarti          #+#    #+#             */
-/*   Updated: 2022/10/25 11:40:24 by diomarti         ###   ########.fr       */
+/*   Created: 2022/10/25 15:59:19 by diomarti          #+#    #+#             */
+/*   Updated: 2022/10/25 16:59:18 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int main()
+char	*ft_strdup(const char *s)
 {
-	char data[] = {'q', 'r', 's', 't', 'p', 'a', 'x'};
-	
-	char *pos = ft_memchr(data, 't', 7);
-	printf("pos[0] = %c\n", pos[0]);
-	printf("pos[1] = %c\n", pos[1]);
+	int		s_len;
+	char	*str;
+	int		i;
 
+	s_len = ft_strlen(s);
+	str = malloc(s_len * 2 + 1);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		str[i] = s[i];
+		i++;
+	}
+	i = 0;
+	while (s[i] != '\0')
+	{
+		str[i + s_len] = s[i];
+		i++;
+	}
+	str[i + s_len] = '\0';
+	return (str);
 }

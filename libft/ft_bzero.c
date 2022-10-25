@@ -6,7 +6,7 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:14:28 by diomarti          #+#    #+#             */
-/*   Updated: 2022/10/25 14:21:54 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/10/25 15:57:31 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_bzero(void *s, size_t n)
 	*ptr = s;
 	while (n > 0)
 	{
-		*ptr = '\0';
+		ptr = '\0';
 		ptr++;
 		n--;
 	}

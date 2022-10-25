@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 12:46:03 by diomarti          #+#    #+#             */
-/*   Updated: 2022/10/25 17:16:40 by diomarti         ###   ########.fr       */
+/*   Created: 2022/10/25 17:18:18 by diomarti          #+#    #+#             */
+/*   Updated: 2022/10/25 18:49:20 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	size_t	i;
-	int		src_len;
+	size_t	j;
+	char	*ptr;
 
 	i = 0;
-	src_len = ft_strlen(src);
-	if (size > 0)
+	j = 0;
+	ptr = malloc(nmemb * size);
+	if (!nmemb || !size)
+		return (NULL);
+	while (i < (nmemb * size))
 	{
-		while ((i < (size - 1)) && src[i] != '\0')
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		dst[i] = '\0';
+		ptr[i] = '\0';
+		i++;
 	}
-	return (src_len);
+	return (ptr);
 }
