@@ -6,7 +6,7 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 12:44:43 by diomarti          #+#    #+#             */
-/*   Updated: 2022/10/25 17:46:44 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/10/26 17:35:54 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-	if (ft_isalpha(c) || ft_isdigit(c))
+	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 		return (1);
 	else
 		return (0);
