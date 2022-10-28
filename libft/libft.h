@@ -6,7 +6,7 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 13:19:20 by diomarti          #+#    #+#             */
-/*   Updated: 2022/10/28 14:29:03 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/10/28 17:42:03 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
+# include <limits.h>
 
+//Part1
 size_t	ft_strlen(const char *s);
 
 int		ft_atoi(const char *str);
@@ -64,4 +66,10 @@ char	*ft_strdup(const char *s);
 
 void	*ft_calloc(size_t nmemb, size_t size);
 
+//Part2
+void	ft_putchar_fd(char c, int fd);
+
+void	ft_putstr_fd(char *s, int fd);
+
+void	ft_putnbr_fd(int n, int fd);
 #endif
