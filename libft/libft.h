@@ -6,7 +6,7 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 13:19:20 by diomarti          #+#    #+#             */
-/*   Updated: 2022/10/25 17:19:32 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/10/28 14:29:03 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ size_t	ft_strlen(const char *s);
 int		ft_atoi(const char *str);
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
@@ -59,4 +61,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 char	*ft_strdup(const char *s);
+
+void	*ft_calloc(size_t nmemb, size_t size);
+
 #endif

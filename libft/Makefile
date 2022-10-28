@@ -6,33 +6,26 @@
 #    By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 15:49:15 by diomarti          #+#    #+#              #
-#    Updated: 2022/10/26 17:04:03 by diomarti         ###   ########.fr        #
+#    Updated: 2022/10/28 14:02:54 by diomarti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			=	ft_isalnum.c ft_isprint.c ft_memcmp.c\
-					ft_strlcat.c ft_strncmp.c ft_atoi.c ft_isalpha.c \
-					ft_memcpy.c ft_strchr.c  ft_strlcpy.c \
-					ft_strnstr.c ft_tolower.c ft_bzero.c ft_isascii.c ft_memccpy.c \
-					ft_memmove.c ft_strdup.c  ft_strlen.c  ft_strrchr.c \
-					ft_toupper.c ft_calloc.c  ft_isdigit.c ft_memchr.c  ft_memset.c  \
-OBJS			= $(SRCS:.c=.o)
+NAME = libft.a
+SRC = ft_memset ft_bzero ft_memcpy ft_memmove ft_memchr\
+ft_memcmp ft_strlen ft_strlcpy ft_strlcat ft_strchr ft_strrchr\
+ft_strnstr ft_strncmp ft_atoi ft_isalpha ft_isdigit ft_isalnum\
+ft_isascii ft_isprint ft_toupper ft_tolower ft_calloc ft_strdup\
 
-CC				= gcc
-RM				= rm -f
-CFLAGS			= -Wall -Wextra -Werror -I.
+CC =gcc
+RM =rm -f
+CFLAGS = -Wall -Werror -Wextra -I.
 
-NAME			= libft.a
+all:$(NAME)
 
-all:			$(NAME)
-
-$(NAME):		$(OBJS)
-				ar rcs $(NAME) $(OBJS)
-
+$(NAME): $(SRC:=.o)
+			ar rc $(NAME) $(SRC:=.o)
 clean:
-				$(RM) $(OBJS)
-
-fclean:			clean
-				$(RM) $(NAME)
-
-re:				fclean $(NAME)
+	$(RM)	$(SRC:=.o)
+fclean: clean
+		$(RM)	$(NAME)
+re:	fclean	$(NAME)

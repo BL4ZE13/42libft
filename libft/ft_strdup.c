@@ -6,7 +6,7 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:59:19 by diomarti          #+#    #+#             */
-/*   Updated: 2022/10/25 16:59:18 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/10/28 16:08:38 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,11 @@ char	*ft_strdup(const char *s)
 {
 	int		s_len;
 	char	*str;
-	int		i;
 
 	s_len = ft_strlen(s);
-	str = malloc(s_len * 2 + 1);
-	i = 0;
-	while (s[i] != '\0')
-	{
-		str[i] = s[i];
-		i++;
-	}
-	i = 0;
-	while (s[i] != '\0')
-	{
-		str[i + s_len] = s[i];
-		i++;
-	}
-	str[i + s_len] = '\0';
+	str = malloc(s_len + 1);
+	if (str == NULL)
+		return (0);
+	ft_memcpy(str, (void *)s, ft_strlen(s) + 1);
 	return (str);
 }
