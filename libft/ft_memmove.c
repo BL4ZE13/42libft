@@ -6,7 +6,7 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 12:45:20 by diomarti          #+#    #+#             */
-/*   Updated: 2022/10/28 14:56:53 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/10/31 14:05:22 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	strtemp = (char *)src;
 	d = (char *)dest;
+	if (!dest && !src && n == 0)
+		return (NULL);
 	if (strtemp < d)
 	{
 		while (n--)

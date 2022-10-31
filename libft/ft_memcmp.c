@@ -6,7 +6,7 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 12:45:09 by diomarti          #+#    #+#             */
-/*   Updated: 2022/10/25 17:02:05 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/10/31 14:32:49 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,15 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
 	i = 0;
-	while (str1[i] == str2[i] && i < n)
-		i++;
-	if (str1[i] != str2[i] && i < n)
+	if (n > 0)
+	{
+		while (str1[i] == str2[i] && i < n)
+		{
+			if (i == n - 1)
+				break ;
+			i++;
+		}
 		return (str1[i] - str2[i]);
+	}
 	return (0);
 }
