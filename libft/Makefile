@@ -6,7 +6,7 @@
 #    By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 15:49:15 by diomarti          #+#    #+#              #
-#    Updated: 2022/10/31 12:07:11 by diomarti         ###   ########.fr        #
+#    Updated: 2022/11/02 16:53:26 by diomarti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ ft_memcmp ft_strlen ft_strlcpy ft_strlcat ft_strchr ft_strrchr\
 ft_strnstr ft_strncmp ft_atoi ft_isalpha ft_isdigit ft_isalnum\
 ft_isascii ft_isprint ft_toupper ft_tolower ft_calloc ft_strdup\
 ft_putchar_fd ft_putstr_fd ft_putnbr_fd ft_putendl_fd ft_substr\
-ft_strjoin ft_strtrim ft_split ft_itoa ft_strmapi ft_striteri\
+ft_strjoin ft_strtrim ft_itoa ft_strmapi ft_striteri\
 
 CC =gcc
 RM =rm -f

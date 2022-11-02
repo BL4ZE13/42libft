@@ -1,40 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 12:45:37 by diomarti          #+#    #+#             */
-/*   Updated: 2022/11/02 15:50:09 by diomarti         ###   ########.fr       */
+/*   Created: 2022/11/02 15:37:47 by diomarti          #+#    #+#             */
+/*   Updated: 2022/11/02 16:32:07 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
+	size_t	len;
 	size_t	i;
 	size_t	j;
-	size_t	dlen;
-	size_t	slen;
+	char	*ptr;
 
-	slen = ft_strlen(src);
-	dlen = ft_strlen(dst);
-	j = dlen;
+	j = 0;
 	i = 0;
-	if (dlen < size - 1 && size > 0)
-	{
-		while (src[i] && dlen + i < size - 1)
-		{
-			dst[j] = src[i];
-			i++;
-			j++;
-		}
-		dst[j] = '\0';
-	}
-	if (dlen >= size)
-		dlen = size;
-	return (dlen + slen);
+	len = ft_strlen(s1) + ft_strlen(s2);
+	ptr = malloc(sizeof(char) * len + 1);
+	if (!s1 || !s2)
+		return (0);
+	if (!ptr)
+		return (0);
+	while (s1[j])
+		ptr[i++] = s1[j++];
+	j = 0;
+	while (s2[j])
+		ptr[i++] = s2[j++];
+	ptr[i] = '\0';
+	return (ptr);
 }

@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 12:45:37 by diomarti          #+#    #+#             */
-/*   Updated: 2022/11/02 15:50:09 by diomarti         ###   ########.fr       */
+/*   Created: 2022/10/31 12:25:59 by diomarti          #+#    #+#             */
+/*   Updated: 2022/11/02 12:40:20 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	i;
-	size_t	j;
-	size_t	dlen;
-	size_t	slen;
+	size_t	s_len;
 
-	slen = ft_strlen(src);
-	dlen = ft_strlen(dst);
-	j = dlen;
-	i = 0;
-	if (dlen < size - 1 && size > 0)
-	{
-		while (src[i] && dlen + i < size - 1)
-		{
-			dst[j] = src[i];
-			i++;
-			j++;
-		}
-		dst[j] = '\0';
-	}
-	if (dlen >= size)
-		dlen = size;
-	return (dlen + slen);
+	if (!s1 || !set)
+		return (0);
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
+	s_len = ft_strlen(s1);
+	while (s_len && ft_strchr(set, s1[s_len]))
+		s_len--;
+	return (ft_substr(s1, 0, s_len + 1));
 }

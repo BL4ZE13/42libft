@@ -1,40 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 12:45:37 by diomarti          #+#    #+#             */
-/*   Updated: 2022/11/02 15:50:09 by diomarti         ###   ########.fr       */
+/*   Created: 2022/11/02 16:32:50 by diomarti          #+#    #+#             */
+/*   Updated: 2022/11/02 16:42:33 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
+	char	*ptr;
 	size_t	i;
-	size_t	j;
-	size_t	dlen;
-	size_t	slen;
 
-	slen = ft_strlen(src);
-	dlen = ft_strlen(dst);
-	j = dlen;
 	i = 0;
-	if (dlen < size - 1 && size > 0)
+	if (!s || !f)
+		return (0);
+	ptr = malloc(ft_strlen(s) + 1);
+	if (!ptr)
+		return (0);
+	while (s[i] != '\0')
 	{
-		while (src[i] && dlen + i < size - 1)
-		{
-			dst[j] = src[i];
-			i++;
-			j++;
-		}
-		dst[j] = '\0';
+		ptr[i] = f(i, s[i]);
+		i++;
 	}
-	if (dlen >= size)
-		dlen = size;
-	return (dlen + slen);
+	ptr[i] = '\0';
+	return (ptr);
 }
