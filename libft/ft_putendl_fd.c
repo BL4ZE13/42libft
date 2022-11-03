@@ -6,7 +6,7 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 12:16:25 by diomarti          #+#    #+#             */
-/*   Updated: 2022/10/31 12:18:19 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/11/03 12:05:56 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putendl_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
+	if (fd == -1)
+		return ;
 	while (s[i] != '\0')
 	{
 		write(fd, &s[i], 1);

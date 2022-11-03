@@ -6,7 +6,7 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 13:19:20 by diomarti          #+#    #+#             */
-/*   Updated: 2022/11/02 16:53:10 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/11/03 16:19:23 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,4 +87,5 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
+char	**ft_split(char const *s, char c);
 #endif

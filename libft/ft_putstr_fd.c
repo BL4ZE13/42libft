@@ -6,7 +6,7 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 17:20:13 by diomarti          #+#    #+#             */
-/*   Updated: 2022/11/02 17:18:34 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/11/03 12:05:11 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr_fd(char *c, int fd)
 	int	i;
 
 	i = 0;
-	if (!c)
+	if (!c || fd == -1)
 		return ;
 	while (c[i] != '\0')
 	{
