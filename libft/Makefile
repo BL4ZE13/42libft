@@ -6,7 +6,7 @@
 #    By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 15:49:15 by diomarti          #+#    #+#              #
-#    Updated: 2022/11/03 16:22:51 by diomarti         ###   ########.fr        #
+#    Updated: 2022/11/07 16:57:44 by diomarti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,9 @@ ft_strnstr ft_strncmp ft_atoi ft_isalpha ft_isdigit ft_isalnum\
 ft_isascii ft_isprint ft_toupper ft_tolower ft_calloc ft_strdup\
 ft_strjoin ft_strtrim ft_strmapi ft_striteri ft_itoa ft_split\
 
+BONUS = ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast ft_lstadd_back\
+ft_lstclear ft_lstdelone ft_lstiter
+
 CC =gcc
 RM =rm -f
 CFLAGS = -Wall -Werror -Wextra -I.
@@ -27,7 +30,10 @@ all:$(NAME)
 $(NAME): $(SRC:=.o)
 			ar rc $(NAME) $(SRC:=.o)
 clean:
-	$(RM)	$(SRC:=.o)
+	$(RM)	$(SRC:=.o)	$(BONUS:=.o)
 fclean: clean
 		$(RM)	$(NAME)
 re:	fclean	$(NAME)
+
+bonus:	$(SRC:=.o)	$(BONUS:=.o)
+				ar rc $(NAME) $(SRC:=.o)	$(BONUS:=.o)
