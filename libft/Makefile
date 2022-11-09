@@ -19,7 +19,7 @@ ft_isascii ft_isprint ft_toupper ft_tolower ft_calloc ft_strdup\
 ft_strjoin ft_strtrim ft_strmapi ft_striteri ft_itoa ft_split\
 
 BONUS = ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast ft_lstadd_back\
-ft_lstclear ft_lstdelone ft_lstiter
+ft_lstdelone ft_lstclear ft_lstiter ft_lstmap\
 
 CC =gcc
 RM =rm -f
@@ -30,10 +30,10 @@ all:$(NAME)
 $(NAME): $(SRC:=.o)
 			ar rc $(NAME) $(SRC:=.o)
 clean:
-	$(RM)	$(SRC:=.o)	$(BONUS:=.o)
+	$(RM)	$(SRC:=.o) $(BONUS:=.o)
 fclean: clean
 		$(RM)	$(NAME)
 re:	fclean	$(NAME)
 
 bonus:	$(SRC:=.o)	$(BONUS:=.o)
-				ar rc $(NAME) $(SRC:=.o)	$(BONUS:=.o)
+		ar rc $(NAME) $(SRC:=.o)	$(BONUS:=.o)
