@@ -6,7 +6,7 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:12:40 by diomarti          #+#    #+#             */
-/*   Updated: 2022/11/07 16:01:42 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/11/09 15:58:14 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,5 @@ void	ft_lstadd_front(t_list **lst, t_list *new_node)
 		new_node->next = *lst;
 	*lst = new_node;
 }
+
+/**/

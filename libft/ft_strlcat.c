@@ -6,7 +6,7 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 12:45:37 by diomarti          #+#    #+#             */
-/*   Updated: 2022/11/02 15:50:09 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/11/09 15:11:10 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,25 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-	size_t	j;
 	size_t	dlen;
 	size_t	slen;
 
 	slen = ft_strlen(src);
 	dlen = ft_strlen(dst);
-	j = dlen;
 	i = 0;
-	if (dlen < size - 1 && size > 0)
-	{
-		while (src[i] && dlen + i < size - 1)
-		{
-			dst[j] = src[i];
-			i++;
-			j++;
-		}
-		dst[j] = '\0';
-	}
 	if (dlen >= size)
-		dlen = size;
-	return (dlen + slen);
+		return (size + slen);
+	while (src[i] != '\0' && dlen + 1 < size)
+	{			
+		dst[dlen] = src[i];
+		i++;
+		dlen++;
+	}
+	dst[dlen] = '\0';
+	return (dlen + ft_strlen(&src[i]));
 }
+
+/*se o tamanho so dest for maior ou igual ao do size
+vai dar return do size mais o tamanho da src
+se n, vai passar size bites da src para o dest e 
+vai dar retrun ao tamanho do dest + o q resta do src*/

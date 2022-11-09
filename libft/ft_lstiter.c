@@ -6,7 +6,7 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:50:22 by diomarti          #+#    #+#             */
-/*   Updated: 2022/11/07 17:00:10 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/11/09 15:56:06 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,3 +22,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
+
+/*vai receber uma funcao q recebe um voide *
+aplicando essa funcao em td o conteodo da lista*/

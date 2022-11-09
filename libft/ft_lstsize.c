@@ -6,7 +6,7 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:28:32 by diomarti          #+#    #+#             */
-/*   Updated: 2022/11/07 16:04:32 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/11/09 15:52:46 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,5 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
+
+/*tamanho da lista*/

@@ -6,7 +6,7 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:35:02 by diomarti          #+#    #+#             */
-/*   Updated: 2022/11/07 16:06:59 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/11/09 15:55:26 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,5 @@ t_list	*ft_lstlast(t_list *lst)
 		lst = lst->next;
 	return (lst);
 }
+
+/*ultimo elemento da lista mandada*/

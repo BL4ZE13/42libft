@@ -6,7 +6,7 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:13:47 by diomarti          #+#    #+#             */
-/*   Updated: 2022/11/07 16:17:48 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/11/09 15:58:07 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,5 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	del(lst->content);
 	free(lst);
 }
+
+/*vai dar free a uma parte expecifica da lista*/

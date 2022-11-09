@@ -6,7 +6,7 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 12:45:12 by diomarti          #+#    #+#             */
-/*   Updated: 2022/10/31 13:50:07 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/11/09 13:22:50 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,15 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*s_temp;
 	size_t			i;
 
-	i = -1;
+	i = 0;
 	d_temp = (unsigned char *)dest;
 	s_temp = (unsigned char *)src;
 	if (!dest && !src)
 		return (NULL);
-	while (++i < n)
+	while (i < n)
+	{
 		d_temp[i] = s_temp[i];
-	return (dest);
+		i++;
+	}
+	return (d_temp);
 }

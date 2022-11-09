@@ -6,7 +6,7 @@
 #    By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 15:49:15 by diomarti          #+#    #+#              #
-#    Updated: 2022/11/07 16:57:44 by diomarti         ###   ########.fr        #
+#    Updated: 2022/11/09 15:51:19 by diomarti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ ft_isascii ft_isprint ft_toupper ft_tolower ft_calloc ft_strdup\
 ft_strjoin ft_strtrim ft_strmapi ft_striteri ft_itoa ft_split\
 
 BONUS = ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast ft_lstadd_back\
-ft_lstclear ft_lstdelone ft_lstiter
+ft_lstclear ft_lstdelone ft_lstiter ft_lstmap\
 
 CC =gcc
 RM =rm -f

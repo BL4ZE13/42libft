@@ -6,7 +6,7 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 11:38:37 by diomarti          #+#    #+#             */
-/*   Updated: 2022/11/03 16:18:23 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/11/09 13:53:31 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,31 @@
 size_t	nmr_str(char const *str, char c)
 {
 	size_t	i;
-	size_t	a;
+	size_t	words;
 	size_t	toggle;
 
 	toggle = 0;
-	a = 0;
+	words = 0;
 	i = 0;
 	while (str[i] != '\0')
 	{
 		if (str[i] != c && toggle == 0)
 		{
 			toggle = 1;
-			a++;
+			words++;
 		}
 		else if (str[i] == c)
 			toggle = 0;
 		i++;
 	}
-	return (a);
+	return (words);
 }
 
-char	*new_word(const char *str, int start, int finish)
+/*vai contar o nmr de palavras 
+sempre q encontra 2 separadores seguidos
+ignora e avanca na string*/
+
+char	*new_string(const char *str, int start, int finish)
 {
 	char	*ptr;
 	size_t	i;
@@ -52,6 +56,9 @@ char	*new_word(const char *str, int start, int finish)
 	return (ptr);
 }
 
+/*vai escrever para dentro da memoria alocada
+a nova palavra*/
+
 char	**mem_alloc(char const *str, char c, char **n_str)
 {
 	size_t	i;
@@ -67,7 +74,7 @@ char	**mem_alloc(char const *str, char c, char **n_str)
 			ind = i;
 		else if ((str[i] == c || i == ft_strlen(str)) && ind >= 0)
 		{
-			n_str[j] = new_word(str, ind, i);
+			n_str[j] = new_string(str, ind, i);
 			j++;
 			ind = -1;
 		}
@@ -86,3 +93,6 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (mem_alloc(s, c, ptr));
 }
+
+/*ptr vai estar a alocar mem para tds as string
+que vao existir*/

@@ -6,7 +6,7 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 12:45:23 by diomarti          #+#    #+#             */
-/*   Updated: 2022/10/31 14:08:27 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/11/09 14:02:05 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,5 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+
+/*vai substituir n bytes do s pelo caractere c*/

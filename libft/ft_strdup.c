@@ -6,7 +6,7 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:59:19 by diomarti          #+#    #+#             */
-/*   Updated: 2022/11/02 15:52:11 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/11/09 14:08:49 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,6 @@ char	*ft_strdup(const char *s)
 	ft_memcpy(str, (void *)s, ft_strlen(s) + 1);
 	return (str);
 }
+
+/*vai duplicar a string para dentro da mem
+alocada*/

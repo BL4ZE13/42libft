@@ -6,7 +6,7 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 16:32:50 by diomarti          #+#    #+#             */
-/*   Updated: 2022/11/02 16:42:33 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/11/09 15:15:18 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	ptr[i] = '\0';
 	return (ptr);
 }
+
+/*a mesma coisa q o iteri mas depois de aplicar 
+em cada caractere vai colocalo na memoria alocada*/

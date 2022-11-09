@@ -6,7 +6,7 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 12:46:15 by diomarti          #+#    #+#             */
-/*   Updated: 2022/10/31 14:41:19 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/11/09 15:16:47 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
+
+/*vai procurar a little no big,se encontrar 
+vai dar return do adress da memoria do big
+onde encontrou*/

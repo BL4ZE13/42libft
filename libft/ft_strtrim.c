@@ -6,7 +6,7 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 12:25:59 by diomarti          #+#    #+#             */
-/*   Updated: 2022/11/02 12:40:20 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/11/09 15:31:31 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 		s_len--;
 	return (ft_substr(s1, 0, s_len + 1));
 }
+
+/*vai se dar um separador e a funcao vai eliminar td
+ate ao primeiro separador e td o q esta para a
+frente do segundo
+ex: s1 = www.google.com, set = '.'
+res: google*/
